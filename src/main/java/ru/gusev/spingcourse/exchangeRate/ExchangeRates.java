@@ -2,7 +2,7 @@ package ru.gusev.spingcourse.exchangeRate;
 
 import java.util.Scanner;
 
-public class ExchangeRate {
+public class ExchangeRates {
     private static final double eurRate = 104.51;
     private static final double usdRate = 96.74;
     private static final double gbpRare = 125.26;
