@@ -43,9 +43,7 @@ public class ExchangeRates {
                     maneyTo(jpyRate);
                     break;
                 case 6:
-
                     maneyToAll(eurRate, usdRate, gbpRare, cnyRate, jpyRate);
-
                     break;
                 case 7:
                     x = 7;
