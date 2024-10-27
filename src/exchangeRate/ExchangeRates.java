@@ -28,19 +28,19 @@ public class ExchangeRates {
 
             switch (sc){
                 case 1:
-                    maneyTo(eurRate);
+                    maneyTo(eurRate, "евро: ");
                     break;
                 case 2:
-                    maneyTo(usdRate);
+                    maneyTo(usdRate, "долларах: ");
                     break;
                 case 3:
-                    maneyTo(gbpRare);
+                    maneyTo(gbpRare, "фунтах: ");
                     break;
                 case 4:
-                    maneyTo(cnyRate);
+                    maneyTo(cnyRate, "китайских юанях: ");
                     break;
                 case 5:
-                    maneyTo(jpyRate);
+                    maneyTo(jpyRate, "японских йенах: ");
                     break;
                 case 6:
                     maneyToAll(eurRate, usdRate, gbpRare, cnyRate, jpyRate);
@@ -54,11 +54,11 @@ public class ExchangeRates {
             }
         }
     }
-    static void maneyTo(double rate){
+    static void maneyTo(double rate, String currency){
         System.out.print("Введите сумму: ");
         double money = scanner.nextDouble();
         money /= rate;
-        System.out.println("Ваша сумма в евро " + money);
+        System.out.println("Ваша сумма в " + currency + money);
     }
     static void maneyToAll(double eur, double usd, double gbp, double cny, double jpy){
         System.out.print("Введите сумму: ");
@@ -72,7 +72,6 @@ public class ExchangeRates {
         System.out.println("Ваша сумма в евро: " + money1
                 + "\nВаша сумма в долларах: " + money2
                 + "\nВаша сумма в фунтах: " + money3
-                + "\nВаша сумма в китайских юанях: " + money4
                 + "\nВаша сумма в китайских юанях: " + money4
                 + "\nВаша сумма в японских йенах: " + money5);
     }
