@@ -8,6 +8,7 @@ public class ExchangeRates {
     private static final double gbpRare = 125.26;
     private static final double cnyRate = 13.53;
     private static final double jpyRate = 0.63;
+
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
