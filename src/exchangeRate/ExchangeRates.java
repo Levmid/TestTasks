@@ -25,25 +25,31 @@ public class ExchangeRates {
             System.out.print("Введите цифру: ");
             int sc = scanner.nextInt();
             System.out.println();
+            System.out.print("Введите сумму: ");
+            double money = scanner.nextDouble();
 
             switch (sc){
                 case 1:
-                    maneyTo(eurRate, "евро: ");
+                    System.out.println("Ваша сумма в евро: "  + money / eurRate);
                     break;
                 case 2:
-                    maneyTo(usdRate, "долларах: ");
+                    System.out.println("Ваша сумма в доллары: "  + money / usdRate);
                     break;
                 case 3:
-                    maneyTo(gbpRare, "фунтах: ");
+                    System.out.println("Ваша сумма в фунты: "  + money / gbpRare);
                     break;
                 case 4:
-                    maneyTo(cnyRate, "китайских юанях: ");
+                    System.out.println("Ваша сумма в китайский юань: "  + money / cnyRate);
                     break;
                 case 5:
-                    maneyTo(jpyRate, "японских йенах: ");
+                    System.out.println("Ваша сумма в японскую йену: "  + money / jpyRate);
                     break;
                 case 6:
-                    maneyToAll(eurRate, usdRate, gbpRare, cnyRate, jpyRate);
+                    System.out.println("Ваша сумма в евро: " + money/eurRate
+                            + "\nВаша сумма в долларах: " + money/usdRate
+                            + "\nВаша сумма в фунтах: " + money/gbpRare
+                            + "\nВаша сумма в китайских юанях: " + money/cnyRate
+                            + "\nВаша сумма в японских йенах: " + money/jpyRate);
                     break;
                 case 7:
                     x = 7;
@@ -53,26 +59,5 @@ public class ExchangeRates {
                     System.out.println("Некорректное значение!");
             }
         }
-    }
-    static void maneyTo(double rate, String currency){
-        System.out.print("Введите сумму: ");
-        double money = scanner.nextDouble();
-        money /= rate;
-        System.out.println("Ваша сумма в " + currency + money);
-    }
-    static void maneyToAll(double eur, double usd, double gbp, double cny, double jpy){
-        System.out.print("Введите сумму: ");
-        double money1, money2, money3, money4, money5;
-        money1 = money2 = money3 = money4 = money5  = scanner.nextDouble();
-        money1 /= eur;
-        money2 /= usd;
-        money3 /= gbp;
-        money4 /= cny;
-        money5 /= jpy;
-        System.out.println("Ваша сумма в евро: " + money1
-                + "\nВаша сумма в долларах: " + money2
-                + "\nВаша сумма в фунтах: " + money3
-                + "\nВаша сумма в китайских юанях: " + money4
-                + "\nВаша сумма в японских йенах: " + money5);
     }
 }

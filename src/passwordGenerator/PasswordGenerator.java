@@ -30,13 +30,11 @@ public class PasswordGenerator {
         StringBuilder password = new StringBuilder();
         Random random = new Random();
 
-        // Добавляем по одному символу из каждой категории
         password.append(getRandomCharacter(random, lowerCaseLetters));
         password.append(getRandomCharacter(random, upperCaseLetters));
         password.append(getRandomCharacter(random, digits));
         password.append(getRandomCharacter(random, specialCharacters));
 
-        // Заполняем оставшуюся длину пароля случайными символами
         for (int i = 4; i < length; i++) {
             password.append(getRandomCharacter(random, allCharacters));
         }
